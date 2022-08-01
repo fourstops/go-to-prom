@@ -1,15 +1,16 @@
-# sense.moda
-
-***
+## sense.moda
 
 *a Prometheus exporter variety pack*
+<br>
+<br>
 
-|   sensor   | measures                                                                             |
+   Sensor   | Metric                                                                             
 | :--------: | :----------------------------------------------------------------------------------- |
-|  *CCS811*  | Total Volatile Organic Compounds (TVOCs), including equivalent carbon dioxide (eCO2) |
+| *CCS811*  | Total Volatile Organic Compounds (TVOCs), including equivalent carbon dioxide (eCO2)  |
 |  *BME680*  | Temperature, Relative Humidity. Pressure, VOCs                                       |
 | *PZEM-016* | AC Volts, Amps, Watts, kWh, Hertz, Power Factor                                      |
 |  *SDS011*  | PM2.5, PM10                                                                          |
+<br>
 
 *   **install pzem016\_exporter module**
 
@@ -31,7 +32,7 @@ sudo systemctl enable pzem016-exporter
 
 ```
 
-**install sds011\_exporter module**
+*   **install sds011\_exporter module**
 
 ```bash
 cd  ~/sense.moda
@@ -49,8 +50,9 @@ sudo systemctl status sds011-exporter
 
 sudo systemctl enable sds011-exporter
 ```
+<br>
 
-**install stemma\_exporter module**
+*   **install stemma\_exporter module**
 
 ```bash
 cd  ~/sense.moda
