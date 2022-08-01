@@ -1,4 +1,12 @@
 # sense.moda
+*a Prometheus exporter variety pack*
+
+* CCS811 CO2 sensor
+* BME680 - Temp, RH, Pressure, and Gas Sensor
+* SGP40 VOC Sensor
+* PZEM-016 Power Meter - RS485 Modbus
+* SDS011 - Particulate Sensor
+
 **install pzem016_exporter module**
 ```
 cd  ~/sense.moda
