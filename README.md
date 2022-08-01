@@ -1,14 +1,19 @@
 # sense.moda
+
+***
+
 *a Prometheus exporter variety pack*
 
-* CCS811 CO2 sensor
-* BME680 - Temp, RH, Pressure, and Gas Sensor
-* SGP40 VOC Sensor
-* PZEM-016 Power Meter - RS485 Modbus
-* SDS011 - Particulate Sensor
+|   sensor   | measures                                                                             |
+| :--------: | :----------------------------------------------------------------------------------- |
+|  *CCS811*  | Total Volatile Organic Compounds (TVOCs), including equivalent carbon dioxide (eCO2) |
+|  *BME680*  | Temperature, Relative Humidity. Pressure, VOCs                                       |
+| *PZEM-016* | AC Volts, Amps, Watts, kWh, Hertz, Power Factor                                      |
+|  *SDS011*  | PM2.5, PM10                                                                          |
 
-**install pzem016_exporter module**
-```
+*   **install pzem016\_exporter module**
+
+```bash
 cd  ~/sense.moda
 sudo cp -r pzem016_exporter /usr/src/
 sudo chown -R pi:pi /usr/src/pzem016_exporter
@@ -26,8 +31,9 @@ sudo systemctl enable pzem016-exporter
 
 ```
 
-**install sds011_exporter module**
-```
+**install sds011\_exporter module**
+
+```bash
 cd  ~/sense.moda
 sudo cp -r sds011_exporter /usr/src/
 sudo chown -R pi:pi /usr/src/sds011_exporter
@@ -44,8 +50,9 @@ sudo systemctl status sds011-exporter
 sudo systemctl enable sds011-exporter
 ```
 
-**install stemma_exporter module**
-```
+**install stemma\_exporter module**
+
+```bash
 cd  ~/sense.moda
 sudo cp -r stemma_exporter /usr/src/
 sudo chown -R pi:pi /usr/src/stemma_exporter
