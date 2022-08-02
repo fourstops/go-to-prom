@@ -11,8 +11,25 @@
 | *PZEM-016* | AC Volts, Amps, Watts, kWh, Hertz, Power Factor                                      |
 |  *SDS011*  | PM2.5, PM10                                                                          |
 <br>
+<br>
 
-*   **install pzem016\_exporter module**
+
+*   ***Dependencies***
+```bash
+git clone https://github.com/fourstops/sense.moda
+cd sense.moda
+
+pip install prometheus-client
+pip install paho-mqtt
+pip install python-pzem
+pip install py-sds011
+pip install aqipy
+pip install adafruit-circuitpython-ccs811
+pip install adafruit-circuitpython-sgp40
+pip install adafruit-circuitpython-bme680
+```
+
+*   **pzem016\_exporter module**
 
 ```bash
 cd  ~/sense.moda
@@ -32,7 +49,7 @@ sudo systemctl enable pzem016-exporter
 
 ```
 
-*   **install sds011\_exporter module**
+*   **sds011\_exporter module**
 
 ```bash
 cd  ~/sense.moda
@@ -52,7 +69,7 @@ sudo systemctl enable sds011-exporter
 ```
 <br>
 
-*   **install stemma\_exporter module**
+*   **stemma\_exporter module**
 
 ```bash
 cd  ~/sense.moda
