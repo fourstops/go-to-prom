@@ -197,5 +197,3 @@ if __name__ == "__main__":
         if DEBUG:
             logging.info('Sensor data: {}'.format(collect_all_data()))
         time.sleep (5)
-
-# python3 pzem016_exporter_mqtt.py --port=8002 --broker='192.168.0.103' --mqttport=1883 --username='pi' --password='goldfish' --topic='power'
