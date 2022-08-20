@@ -31,7 +31,7 @@ def parse_args():
 
     parser.add_argument("-b", "--bind", metavar='ADDRESS', default='0.0.0.0', help="Specify alternate bind address [default: 0.0.0.0]")
     parser.add_argument("-p", "--port", metavar='PORT', default=8000, type=int, help="Specify alternate port [default: 8000]")
-    parser.add_argument("--country", "-c", choices=["CN", "EU", "US"], default="US", metavar="COUNTRY", help="country code (ISO 3166-1 alpha-2) used to compute AQI. Currently accepted values (default: EU) : 'CN' (AQI Mainland China), 'EU' (CAQI) and 'US' (AQI US)")
+    parser.add_argument("--country", "-c", choices=["EU", "US"], default="US", metavar="COUNTRY", help="country code (ISO 3166-1 alpha-2) used to compute AQI. Currently accepted values (default: US) : 'EU' (CAQI) and 'US' (AQI US)")
     parser.add_argument("--delay", "-d", default=15, metavar="SECONDS", type=int, help="seconds to pause after getting data with the sensor before taking another measure (default: 1200, ie. 20 minutes)")
     parser.add_argument("--log", "-l", metavar="FILE", help="path to the CSV file where data will be appended")
     parser.add_argument("--measures", "-m", default=3, metavar="N", type=int, help="get PM2.5 and PM10 values by taking N consecutive measures (default: 3)")
@@ -54,7 +54,7 @@ PM10_HIST = Histogram('pm10_measurements', 'Histogram of Particulate Matter of d
 
 def get_aqi_interval(country):
     # ISO_3166-1 country codes
-    if country in ("CN", "US"):
+    if country in ("US"):
         # 24 hours
         return 86400
     elif country in ("EU"):
