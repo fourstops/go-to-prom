@@ -36,6 +36,7 @@ pip install adafruit-circuitpython-bme680
 cd  ~/sense.moda
 sudo cp -r pzem-exporter /usr/src/
 sudo chown -R pi:pi /usr/src/pzem-exporter
+sudo chmod 666 /dev/ttyAMA0
 
 cd /usr/src/pzem-exporter
 sudo cp ~/sense.moda/services/pzem-exporter.service /etc/systemd/system/pzem-exporter.service
