@@ -16,8 +16,8 @@
 
 *   ***Dependencies***
 ```bash
-git clone https://github.com/fourstops/sense.moda
-cd sense.moda
+git clone https://github.com/fourstops/go-to-prom
+cd go-to-prom
 
 pip install prometheus-client
 pip install paho-mqtt
@@ -33,13 +33,13 @@ pip install adafruit-circuitpython-bme680
 *   **pzem016\_exporter module**
 
 ```bash
-cd  ~/sense.moda
+cd  ~/go-to-prom
 sudo cp -r pzem-exporter /usr/src/
 sudo chown -R pi:pi /usr/src/pzem-exporter
 sudo chmod 666 /dev/ttyAMA0
 
 cd /usr/src/pzem-exporter
-sudo cp ~/sense.moda/services/pzem-exporter.service /etc/systemd/system/pzem-exporter.service
+sudo cp ~/go-to-prom/services/pzem-exporter.service /etc/systemd/system/pzem-exporter.service
 sudo chmod 644 /etc/systemd/system/pzem-exporter.service
 
 sudo systemctl daemon-reload
@@ -55,16 +55,16 @@ sudo systemctl enable pzem-exporter
 *   **sds011\_exporter module**
 
 ```bash
-cd  ~/sense.moda
+cd  ~/go-to-prom
 sudo cp -r sds011_exporter /usr/src/
 sudo chmod -R 775 /usr/src/sds011_exporter
 sudo chown -R pi:pi /usr/src/sds011_exporter
 
 cd /usr/src/sds011_exporter
 
-sudo cp ~/sense.moda/services/sds011-exporter.service /etc/systemd/system/sds011-exporter.service
+sudo cp ~/go-to-prom/services/sds011-exporter.service /etc/systemd/system/sds011-exporter.service
 
-sudo cp ~/sense.moda/services/sds011-exporter.service /etc/systemd/system/sds011-exporter.service
+sudo cp ~/go-to-prom/services/sds011-exporter.service /etc/systemd/system/sds011-exporter.service
 
 sudo chmod 644 /etc/systemd/system/sds011-exporter.service
 sudo systemctl daemon-reload
@@ -80,16 +80,16 @@ sudo systemctl enable sds011-exporter
 *   **moda\_exporter module**
 
 ```bash
-cd  ~/sense.moda
+cd  ~/go-to-prom
 sudo cp -r moda_exporter /usr/src/
-sudo chown -R pi:pi /usr/src/sense.moda_exporter
+sudo chown -R pi:pi /usr/src/go-to-prom_exporter
 
-cd /usr/src/sense.moda_exporter
-sudo cp ~/sense.moda/services/sense.moda-exporter.service /etc/systemd/system/sense.moda-exporter.service
-sudo chmod 644 /etc/systemd/system/sense.moda-exporter.service
+cd /usr/src/go-to-prom_exporter
+sudo cp ~/go-to-prom/services/go-to-prom-exporter.service /etc/systemd/system/go-to-prom-exporter.service
+sudo chmod 644 /etc/systemd/system/go-to-prom-exporter.service
 
 cd /usr/src/stemma_exporter
-sudo cp ~/sense.moda/services/stemma-exporter.service /etc/systemd/system/stemma-exporter.service
+sudo cp ~/go-to-prom/services/stemma-exporter.service /etc/systemd/system/stemma-exporter.service
 sudo chmod 644 /etc/systemd/system/stemma-exporter.service
 
 sudo systemctl daemon-reload
