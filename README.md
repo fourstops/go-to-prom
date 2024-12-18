@@ -1,4 +1,4 @@
-## moda
+## go-to-prom
 
 *a Prometheus exporter variety pack*
 <br>
