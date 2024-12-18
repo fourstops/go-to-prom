@@ -57,6 +57,7 @@ sudo systemctl enable pzem-exporter
 ```bash
 cd  ~/sense.moda
 sudo cp -r sds011_exporter /usr/src/
+sudo chmod -R 775 /usr/src/sds011_exporter
 sudo chown -R pi:pi /usr/src/sds011_exporter
 
 cd /usr/src/sds011_exporter
