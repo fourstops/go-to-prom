@@ -12,7 +12,7 @@ logging.basicConfig(
     format="%(asctime)s.%(msecs)03d %(levelname)-8s %(message)s",
     level=logging.INFO,
     handlers=[
-        logging.FileHandler("enviroplus_exporter.log"),
+        logging.FileHandler("/home/pi/sds011_exporter.log"),
         logging.StreamHandler()
     ],
     datefmt="%Y-%m-%d %H:%M:%S",
