@@ -81,14 +81,14 @@ sudo systemctl enable sds011-exporter
 
 ```bash
 cd  ~/go-to-prom
-sudo cp -r stemma_exporter /usr/src/
+sudo cp -r stemma-exporter /usr/src/
 sudo chown -R pi:pi /usr/src/go-to-prom_exporter
 
 cd /usr/src/go-to-prom_exporter
 sudo cp ~/go-to-prom/services/go-to-prom-exporter.service /etc/systemd/system/go-to-prom-exporter.service
 sudo chmod 644 /etc/systemd/system/go-to-prom-exporter.service
 
-cd /usr/src/stemma_exporter
+cd /usr/src/stemma-exporter
 sudo cp ~/go-to-prom/services/stemma-exporter.service /etc/systemd/system/stemma-exporter.service
 sudo chmod 644 /etc/systemd/system/stemma-exporter.service
 
