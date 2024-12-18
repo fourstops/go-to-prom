@@ -81,7 +81,7 @@ sudo systemctl enable sds011-exporter
 
 ```bash
 cd  ~/go-to-prom
-sudo cp -r moda_exporter /usr/src/
+sudo cp -r stemma_exporter /usr/src/
 sudo chown -R pi:pi /usr/src/go-to-prom_exporter
 
 cd /usr/src/go-to-prom_exporter
